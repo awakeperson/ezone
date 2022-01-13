@@ -12,16 +12,23 @@
     "type": "git",
     "url": "git+https://github.com/awakeperson/ezone.git"
   },
+  "engines": {
+    "node": ">=14"
+  },
   "devDependencies": {
     "prettier": "^2.3.0",
     "yorkie": "^2.0.0",
     "@commitlint/cli": "^14.1.0",
     "@commitlint/config-conventional": "^14.1.0",
     "commitizen": "^4.2.4",
-    "cz-customizable": "^6.3.0"
+    "cz-customizable": "^6.3.0",
+    "lint-staged": "^10.2.11",
+    "zx": "2.0.0"
   },
   "gitHooks": {
-    "commit-msg": "commitlint -e $GIT_PARAMS"
+    "pre-commit": "lint-staged",
+    "commit-msg": "commitlint -e $GIT_PARAMS",
+    "pre-push": "yarn test"
   },
   "config": {
     "commitizen": {
@@ -30,6 +37,12 @@
     "cz-customizable": {
       "config": ".cz-configrc.js"
     }
+  },
+  "lint-staged": {
+    "*.{js,ts,json}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "author": "",
   "license": "ISC",
