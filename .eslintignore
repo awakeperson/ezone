@@ -8,3 +8,4 @@ patches/
 types/
 !/.eslintrc.js
 !/rollup.config.js
+package.json
