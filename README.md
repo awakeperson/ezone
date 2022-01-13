@@ -22,3 +22,6 @@ profiler_binary_host_mirror=
 fse_binary_host_mirror=
 ```
 
+TODO:
+1. 只可以有一个尾行
+2. 弄三模板： 1. 包模板 2. web 项目模板 3. ts 模板
