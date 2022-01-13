@@ -6,4 +6,5 @@
 // 具体就是通过 chmod 755 cli.js 实现修改
 
 // 用于检查入口文件是否正常执行
-console.log('my-node-cli working~')
+
+// console.log('my-node-cli working~')
