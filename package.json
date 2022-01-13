@@ -27,8 +27,7 @@
   },
   "gitHooks": {
     "pre-commit": "lint-staged",
-    "commit-msg": "commitlint -e $GIT_PARAMS",
-    "pre-push": "yarn test"
+    "commit-msg": "commitlint -e $GIT_PARAMS"
   },
   "config": {
     "commitizen": {
